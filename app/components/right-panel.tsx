@@ -5,7 +5,7 @@ import GridItem from "./grid-item";
 import SocialBox from "./grid-items/social-box";
 import Inquiries from "./grid-items/inquiries";
 import Project from "./grid-items/project";
-import Equipments from "./grid-items/equipments";
+import Technology from "./grid-items/technology";
 import { useAnimate, stagger } from "framer-motion";
 
 const staggerDelay = stagger(0.04);
@@ -49,8 +49,8 @@ const RightPanel = () => {
                 <Inquiries item={item} />
               ) : item.type === "project" ? (
                 <Project item={item} />
-              ) : item.type === "equipment" ? (
-                <Equipments item={item} />
+              ) : item.type === "technology" ? (
+                <Technology item={item} />
               ) : (
                 <div>Need to create new component type.</div>
               )}
