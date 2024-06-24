@@ -1,11 +1,13 @@
 import Image from "next/image";
+import { ThemeToggle } from "./components/theme-toggle";
 
 export default function Home() {
   return (
-    <main>
-      <h1 className="text-center text-green-900 font-semibold text-9xl">
-        Hello World
-      </h1>
+    <main className="flex flex-col items-center">
+      <div className="text-center">
+        <h1 className="">Hello World</h1>
+        <ThemeToggle />
+      </div>
     </main>
   );
 }
