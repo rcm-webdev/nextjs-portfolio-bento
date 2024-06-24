@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply h-full dark:bg-neutral-950 dark:text-neutral-50 text-neutral-900 antialiased;
+  }
+}
