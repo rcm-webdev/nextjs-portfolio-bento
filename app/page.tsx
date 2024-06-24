@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main className="flex flex-col items-center">
       <div className="text-center">
-        <h1 className="">Hello World</h1>
+        <h1 className="font-semibold text-4xl">Roberto Murillo</h1>
         <ThemeToggle />
       </div>
     </main>
