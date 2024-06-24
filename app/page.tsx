@@ -73,15 +73,16 @@ export default function Home() {
             </button>
           </div>
           {/* Footer */}
-          <div>
-            <div>
+          <div className="pt-6 text-sm border-t border-neutral-200 dark:border-neutral-800 ">
+            <div className="flex justify-between items-center w-full">
               <span className="text-neutral-500">
                 Built by{" "}
                 <a href="https://x.com/rcmwdev" className="text-primary">
-                  @rcmwdev
+                  @rcmwdev <br />
                 </a>{" "}
-                | &#169;2024 RCMCODES. All Rights Reserved.
+                &#169;2024 RCMCODES | All Rights Reserved
               </span>
+              <ThemeToggle />
             </div>
           </div>
         </div>
