@@ -4,6 +4,40 @@ import { ThemeToggle } from "./components/theme-toggle";
 import { siteConfig } from "@/config/site-config";
 import { SiGithub, SiTwitter, SiLinkedin } from "react-icons/si";
 
+const GridItems = new Array(124).fill(0);
+const GridItems2 = [
+  {
+    className: "rounded-md bg-emerald-300 col-span-2 row-span-2",
+  },
+  {
+    className: "rounded-md bg-emerald-300 col-span-1 row-span-2",
+  },
+  {
+    className: "rounded-md bg-emerald-300 col-span-1 row-span-2",
+  },
+  {
+    className: "rounded-md bg-emerald-300 col-span-2 row-span-4",
+  },
+  {
+    className: "rounded-md bg-emerald-300 col-span-2 row-span-2",
+  },
+  {
+    className: "rounded-md bg-emerald-300 col-span-1 row-span-1",
+  },
+  {
+    className: "rounded-md bg-emerald-300 col-span-1 row-span-1",
+  },
+  {
+    className: "rounded-md bg-emerald-300 col-span-2 row-span-3",
+  },
+  {
+    className: "rounded-md bg-emerald-300 col-span-2 row-span-6",
+  },
+  {
+    className: "rounded-md bg-emerald-300 col-span-2 row-span-4",
+  },
+];
+
 export default function Home() {
   return (
     <main className="flex gap-5 flex-1 w-full h-full ">
@@ -54,21 +88,21 @@ export default function Home() {
             {/* Github */}
             <button>
               <a href="https://github.com/rcm-webdev" target="_blank">
-                <SiGithub size={40} className="hover:text-primary" />
+                <SiGithub size={32} className="hover:text-primary" />
               </a>
             </button>
 
             {/* Twitter */}
             <button>
               <a href="https://x.com/rcmwdev">
-                <SiTwitter size={40} className="hover:text-primary" />
+                <SiTwitter size={32} className="hover:text-primary" />
               </a>
             </button>
 
             {/* LinkedIn */}
             <button>
               <a href="https://www.linkedin.com/in/roberto-c-murillo/">
-                <SiLinkedin size={40} className="hover:text-primary" />
+                <SiLinkedin size={32} className="hover:text-primary" />
               </a>
             </button>
           </div>
@@ -77,7 +111,11 @@ export default function Home() {
             <div className="flex justify-between items-center w-full">
               <span className="text-neutral-500">
                 Built by{" "}
-                <a href="https://x.com/rcmwdev" className="text-primary">
+                <a
+                  href="https://x.com/rcmwdev"
+                  target="_blank"
+                  className="text-primary"
+                >
                   @rcmwdev <br />
                 </a>{" "}
                 &#169;2024 RCMCODES | All Rights Reserved
@@ -89,9 +127,13 @@ export default function Home() {
       </div>
 
       {/* Right Side */}
-      <div className="flex-1 p-6  h-full">
-        <div className="bg-emerald-300 rounded-md flex items-center justify-center dark:bg-emerald-900 h-full">
-          Right Side
+      <div className="flex-1 h-full">
+        {/* Grid Container */}
+        <div className="w-full h-full overflow-y-auto p-6 grid grid-cols-4 auto-rows-[76px] gap-10">
+          {/* Grid Items */}
+          {GridItems2.map((item, index) => {
+            return <div key={index} className={item.className} />;
+          })}
         </div>
       </div>
     </main>

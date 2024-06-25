@@ -1,3 +1,5 @@
+export type GridItemLayout = "1x2" | "2x1" | "2x2" | "2x4";
+
 export const siteConfig = {
   creator: "Roberto Murillo",
   title: "Software Engineer & Creator",
