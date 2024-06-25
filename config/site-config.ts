@@ -1,4 +1,23 @@
 export type GridItemLayout = "1x2" | "2x1" | "2x2" | "2x4";
+export type GridItemType = "projects" | "tech stack" | "codeblock" | "network";
+export type TechStack = {
+  title: string;
+};
+
+export interface GridItemInterface {
+  layout: GridItemLayout;
+  type: GridItemType;
+  title: string;
+  icon?: string;
+  username?: string;
+  description?: string;
+  color?: string;
+  buttonTitle?: string;
+  buttonSecondaryTitle?: string;
+  buttonLink?: string;
+  //   Projects
+  image?: string;
+}
 
 export const siteConfig = {
   creator: "Roberto Murillo",
