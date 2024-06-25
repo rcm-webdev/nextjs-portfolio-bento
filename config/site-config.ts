@@ -19,6 +19,15 @@ export interface GridItemInterface {
   image?: string;
 }
 
+const GridItems: GridItemInterface[] = [
+  {
+    layout: "2x4",
+    type: "projects",
+    title: "PlantJoy",
+    color: "#FFFACC",
+  },
+];
+
 export const siteConfig = {
   creator: "Roberto Murillo",
   title: "Software Engineer & Creator",
@@ -32,4 +41,5 @@ export const siteConfig = {
   bodyContent: function () {
     return `${this.intro}\n\n${this.instruction}\n\n${this.bio}`;
   },
+  items: GridItems,
 } as const;
