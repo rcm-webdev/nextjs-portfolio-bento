@@ -5,21 +5,23 @@ const SocialBox = ({ item }: { item: GridItemInterface }) => {
   return (
     <div>
       {/* Header */}
-      <div>
+      <div className="flex items-center justify-between">
         {/* Icon */}
-        <div>ICON</div>
+        <div>{item.icon}</div>
         {/* Button */}
         {item.layout === "2x2" && <div>Button</div>}
       </div>
       {/* Content Container */}
-      <div>
+      <div className="mt-2 ">
         {/* Title */}
-        <div> {item.title}</div>
+        <div className=" text-lg font-semibold"> {item.title}</div>
         {/* Username */}
-        <div>{item.username} </div>
+        <div className="text-sm text-neutral-500">{item.username} </div>
         {/* Description */}
-        <div>{item.description} </div>
+        <div className="text-sm text-neutral-500">{item.description} </div>
       </div>
+      {/* Button */}
+      {item.layout === "1x2" && <div>Button</div>}
     </div>
   );
 };
