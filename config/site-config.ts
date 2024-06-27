@@ -141,6 +141,7 @@ const GridItems: GridItemInterface[] = [
     price: "$50",
     buttonLink: "https://superpeer.com/makrdev/-/supabase-mentor",
   },
+
   {
     layout: "2x1",
     type: "project",

@@ -8,6 +8,7 @@ import Social from "./components/grid-items/social-box";
 import Mentor from "./components/grid-items/mentor";
 import Project from "./components/grid-items/project";
 import Equipments from "./components/grid-items/equipments";
+import Footer from "./components/footer";
 
 export default function Home() {
   return (
@@ -78,22 +79,7 @@ export default function Home() {
             </button>
           </div>
           {/* Footer */}
-          <div className="pt-6 text-sm border-t border-neutral-200 dark:border-neutral-800 ">
-            <div className="flex justify-between items-center w-full">
-              <span className="text-neutral-500">
-                Built by{" "}
-                <a
-                  href="https://x.com/rcmwdev"
-                  target="_blank"
-                  className="text-primary"
-                >
-                  @rcmwdev <br />
-                </a>{" "}
-                &#169;2024 RCMCODES | All Rights Reserved
-              </span>
-              <ThemeToggle />
-            </div>
-          </div>
+          <Footer />
         </div>
       </div>
 
