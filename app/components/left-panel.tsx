@@ -7,8 +7,11 @@ import Footer from "./footer";
 
 const LeftPanel = () => {
   return (
-    <div className="flex-1 p-8  h-full max-w-md">
-      <div className="rounded-md flex flex-col  space-y-2 h-full">
+    <div
+      key="left-panel"
+      className="flex-1 px-8 pt-8 xl:p-8 h-full w-full xl:max-w-md"
+    >
+      <div className="rounded-md flex flex-col space-y-6 w-full h-full">
         {/* Avatar */}
         <a
           href="/"
@@ -72,7 +75,10 @@ const LeftPanel = () => {
           </button>
         </div>
         {/* Footer */}
-        <Footer />
+
+        <div className="hidden px-8 w-full xl:flex">
+          <Footer />
+        </div>
       </div>
     </div>
   );

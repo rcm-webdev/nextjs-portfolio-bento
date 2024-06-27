@@ -3,7 +3,7 @@ import { ThemeToggle } from "./theme-toggle";
 
 const Footer = () => {
   return (
-    <div className="pt-6 text-sm border-t border-neutral-200 dark:border-neutral-800 ">
+    <div className="pt-6 w-full text-xs border-t border-neutral-200 dark:border-neutral-800 ">
       <div className="flex justify-between items-center w-full">
         <span className="text-neutral-500">
           Built by{" "}

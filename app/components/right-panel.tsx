@@ -10,7 +10,7 @@ const RightPanel = () => {
   return (
     <div className="flex-1 h-full">
       {/* Grid Container */}
-      <div className="w-full h-full overflow-y-auto p-6 grid grid-cols-4 auto-rows-[76px] gap-10">
+      <div className="w-full h-full xl:overflow-y-auto p-6 grid grid-cols-4 auto-rows-[76px] gap-10">
         {/* Grid Items */}
         {siteConfig.items.map((item, index) => {
           return (
