@@ -4,6 +4,7 @@ import { ThemeToggle } from "./components/theme-toggle";
 import { siteConfig } from "@/config/site-config";
 import { SiGithub, SiTwitter, SiLinkedin } from "react-icons/si";
 import GridItem from "./components/grid-item";
+import SocialBox from "./components/grid-items/social-box";
 
 export default function Home() {
   return (
@@ -101,7 +102,13 @@ export default function Home() {
           {siteConfig.items.map((item, index) => {
             return (
               <GridItem key={item.title + index} size={item.layout}>
-                <div>{item.title}</div>
+                <div>
+                  {item.type === "social" ? (
+                    <SocialBox item={item} />
+                  ) : (
+                    <div>Not implemented yet</div>
+                  )}
+                </div>
               </GridItem>
             );
           })}
