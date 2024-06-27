@@ -13,7 +13,7 @@ export type TechStack = {
 
 export type EqiupmentItem = {
   title: string;
-  link: string;
+  link?: string;
 };
 
 export interface GridItemInterface {
@@ -75,23 +75,23 @@ const GridItems: GridItemInterface[] = [
   {
     layout: "2x4",
     type: "equipment",
-    title: "Video Equipments",
-    image: "/equipments-image.jpeg",
+    title: "Tech Stack",
+    image: "/code.webp",
     equipments: [
       {
-        title: "Sony A7III",
+        title: "MongoDB",
         link: "https://www.amazon.com/Sony-Full-frame-Mirrorless-Interchangeable-Lens-ILCE7M3K/dp/B07B45D8WV?&_encoding=UTF8&tag=makrdev-20&linkCode=ur2&linkId=f91877e8350da1e43b161adac6e9a6d7&camp=1789&creative=9325",
       },
       {
-        title: "Tamron 24-75mm Sony-E Mount",
+        title: "Express.js",
         link: "https://www.amazon.com/s?k=tamron+24-75+f2.8+sony+e+mount&sprefix=tamron+24-75%252Caps%252C215&ref=nb_sb_ss_ts-doa-p_1_12&_encoding=UTF8&tag=makrdev-20&linkCode=ur2&linkId=7f90fb483df302e8131afea2f4cd89bb&camp=1789&creative=9325",
       },
       {
-        title: "Thronmax Mdrill One Pro",
+        title: "React",
         link: "https://www.amazon.com/s?k=thronmax+mdrill+one+pro&sprefix=thronmax%252Caps%252C213&ref=nb_sb_ss_ts-doa-p_7_8&_encoding=UTF8&tag=makrdev-20&linkCode=ur2&linkId=ffb6dc2e55c74508300d2c5eac250e1e&camp=1789&creative=9325",
       },
       {
-        title: "Godox SL-60W",
+        title: "Node.js",
         link: "https://www.amazon.com/s?k=godox+sl60&crid=2OZLC933LK7K0&sprefix=godox+sl60%252Caps%252C213&ref=nb_sb_noss_1&_encoding=UTF8&tag=makrdev-20&linkCode=ur2&linkId=a9fcedfbfaff1bb1301c303a45055038&camp=1789&creative=9325",
       },
       {

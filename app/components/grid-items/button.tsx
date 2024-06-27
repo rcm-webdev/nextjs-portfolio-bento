@@ -16,7 +16,7 @@ const Button = ({
     >
       <span>{text}</span>
       {secondaryText ? (
-        <span className="font-light text-neutral-200">{secondaryText}</span>
+        <span className="font-thin text-neutral-100">{secondaryText}</span>
       ) : (
         ""
       )}
