@@ -19,14 +19,14 @@ const variants = cva(
   }
 );
 
-const GridItem = ({
-  size,
-  children,
-}: {
-  size: string;
-  children: React.ReactNode;
-}) => {
-  return <div>{children} </div>;
+type GridItemProps = { children: React.ReactNode } & VariantProps<
+  typeof variants
+>;
+
+const GridItem = ({ size, children }: GridItemProps) => {
+  return (
+    <div className={cn(variants({ size, className: "" }))}>{children} </div>
+  );
 };
 
 export default GridItem;
