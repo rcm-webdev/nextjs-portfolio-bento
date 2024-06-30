@@ -4,7 +4,7 @@ import React from "react";
 import profilePic from "/public/profile.webp";
 
 import Footer from "./footer";
-import Button from "./grid-items/button";
+
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
@@ -23,9 +23,6 @@ const LeftPanel = () => {
           <Image
             src={profilePic}
             alt="avatar"
-            layout="fill"
-            objectFit="cover"
-            objectPosition="center"
             priority
             loading="eager"
             placeholder="blur"
