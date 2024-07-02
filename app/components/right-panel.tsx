@@ -1,17 +1,43 @@
 "use client";
 import { siteConfig } from "@/config/site-config";
-import React from "react";
+import React, { useEffect } from "react";
 import GridItem from "./grid-item";
 import SocialBox from "./grid-items/social-box";
 import Mentor from "./grid-items/mentor";
 import Project from "./grid-items/project";
 import Equipments from "./grid-items/equipments";
+import { useAnimate, stagger } from "framer-motion";
+
+const staggerDelay = stagger(0.1, { startDelay: 0.15 });
 
 const RightPanel = () => {
+  const [scope, animate] = useAnimate();
+
+  useEffect(() => {
+    if (scope.current) {
+      animate(
+        "div",
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+        },
+        {
+          type: "spring",
+          stiffness: 330,
+          damping: 35,
+          delay: staggerDelay,
+        }
+      );
+    }
+  }, [scope]);
   return (
     <div className="flex-1 md:h-full">
       {/* Grid Container */}
-      <div className="w-full md:h-full xl:overflow-y-auto p-6 grid grid-cols-2 md:grid-cols-4 auto-rows-[76px] gap-6 xl:gap-10">
+      <div
+        ref={scope}
+        className="w-full md:h-full xl:overflow-y-auto p-6 grid grid-cols-2 md:grid-cols-4 auto-rows-[76px] gap-6 xl:gap-10"
+      >
         {/* Grid Items */}
         {siteConfig.items.map((item, index) => {
           return (
