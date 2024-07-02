@@ -8,7 +8,7 @@ import Project from "./grid-items/project";
 import Equipments from "./grid-items/equipments";
 import { useAnimate, stagger } from "framer-motion";
 
-const staggerDelay = stagger(0.1, { startDelay: 0.15 });
+const staggerDelay = stagger(0.04);
 
 const RightPanel = () => {
   const [scope, animate] = useAnimate();
@@ -23,6 +23,7 @@ const RightPanel = () => {
           scale: 1,
         },
         {
+          duration: 0.15,
           type: "spring",
           stiffness: 330,
           damping: 35,
