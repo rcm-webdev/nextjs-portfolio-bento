@@ -33,7 +33,7 @@ const SocialBox = ({ item }: { item: GridItemInterface }) => {
           {/* Username */}
           <div className="text-sm text-neutral-500">{item.username} </div>
           {/* Description */}
-          <div className="text-sm text-neutral-500 line-clamp-2">
+          <div className="text-sm text-neutral-500 line-clamp-2 @lg:line-clamp-none">
             {item.description}{" "}
           </div>
         </div>
