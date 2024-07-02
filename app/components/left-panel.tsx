@@ -9,7 +9,7 @@ const LeftPanel = () => {
   return (
     <div
       key="left-panel"
-      className="flex-1 px-8 pt-8 xl:p-8 h-full w-full xl:max-w-md"
+      className="flex-1 px-8 pt-8 xl:p-8 xl:h-full w-full xl:max-w-md"
     >
       <div className="rounded-md flex flex-col space-y-6 w-full h-full">
         {/* Avatar */}
