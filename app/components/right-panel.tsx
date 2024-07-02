@@ -1,3 +1,4 @@
+"use client";
 import { siteConfig } from "@/config/site-config";
 import React from "react";
 import GridItem from "./grid-item";
