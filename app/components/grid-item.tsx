@@ -3,7 +3,7 @@ import { cn } from "@/utils/cn";
 import { cva, type VariantProps } from "class-variance-authority";
 
 const variants = cva(
-  "shadow-grid rounded-3xl bg-white dark:bg-neutral-900 flex flex-col justify-center",
+  "shadow-grid rounded-3xl bg-white dark:bg-neutral-900 flex flex-col justify-center @container",
   {
     variants: {
       size: {
