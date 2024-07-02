@@ -177,6 +177,7 @@ const GridItems: GridItemInterface[] = [
 
 export const siteConfig = {
   creator: "Roberto Murillo",
+  pageTitle: "RCM CODES | Software Engineer",
   title: "Software Engineer & Creator",
   greetings: "Hello there,",
   intro:
