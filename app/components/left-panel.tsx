@@ -52,31 +52,10 @@ const LeftPanel = () => {
           </div>
         </div>
         {/* Buttons */}
-        <div className="flex gap-5 w-full">
-          {/* Github */}
-          <button>
-            <a href="https://github.com/rcm-webdev" target="_blank">
-              <SiGithub size={32} className="hover:text-primary" />
-            </a>
-          </button>
-
-          {/* Twitter */}
-          <button>
-            <a href="https://x.com/rcmwdev">
-              <SiTwitter size={32} className="hover:text-primary" />
-            </a>
-          </button>
-
-          {/* LinkedIn */}
-          <button>
-            <a href="https://www.linkedin.com/in/roberto-c-murillo/">
-              <SiLinkedin size={32} className="hover:text-primary" />
-            </a>
-          </button>
-        </div>
+        <div className="flex gap-5 w-full"></div>
         {/* Footer */}
 
-        <div className="hidden px-8 w-full xl:flex">
+        <div className="hidden w-full xl:flex">
           <Footer />
         </div>
       </div>
