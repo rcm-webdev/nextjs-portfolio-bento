@@ -131,7 +131,7 @@ const GridItems: GridItemInterface[] = [
     title: "Need a developer?",
     icon: "developer",
     promotion: "LETS CONNECT",
-
+    color: "#171717",
     buttonLink: "/",
   },
 
@@ -151,6 +151,7 @@ const GridItems: GridItemInterface[] = [
     username: "@rcmwdev",
     description: "Training for a half-marathon &  Reading The Will of the Many",
     icon: "now",
+    color: "#17191e",
     buttonTitle: "Last updated:",
     buttonSecondaryText: "July 2, 2024",
     buttonLink: "https://nownownow.com/about",
