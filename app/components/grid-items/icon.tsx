@@ -1,6 +1,50 @@
 const Icons: {
   [key: string]: JSX.Element;
 } = {
+  designer: (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+    >
+      <defs>
+        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#3b82f6"></stop>
+          <stop offset="100%" stop-color="#a855f7"></stop>
+        </linearGradient>
+      </defs>
+      <path
+        fill="none"
+        stroke="url(#gradient)"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="1.5"
+        d="M3 8.25V18a2.25 2.25 0 0 0 2.25 2.25h13.5A2.25 2.25 0 0 0 21 18V8.25m-18 0V6a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 6v2.25m-18 0h18M5.25 6h.008v.008H5.25zM7.5 6h.008v.008H7.5zm2.25 0h.008v.008H9.75z"
+      ></path>
+    </svg>
+  ),
+
+  developer: (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 1024 1024"
+    >
+      <defs>
+        <linearGradient id="gradientTwo" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#FF5F6D"></stop>
+          <stop offset="100%" stop-color="#FFC371"></stop>
+        </linearGradient>
+      </defs>
+      <path
+        fill="url(#gradientTwo)"
+        d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 0 0 308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 0 0-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32m-40 728H184V184h656z"
+      ></path>
+    </svg>
+  ),
+
   youtube: (
     <svg
       width="28"
@@ -69,36 +113,17 @@ const Icons: {
       </g>
     </svg>
   ),
-  udemy: (
+  now: (
     <svg
-      width="14"
-      height="27"
-      viewBox="0 0 14 27"
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      width="26"
+      height="26"
+      viewBox="0 0 24 24"
     >
-      <g id="udemy-seeklogo.com 1" clipPath="url(#clip0_4_373)">
-        <path
-          id="Vector"
-          d="M0.00101681 8.04051L7.00153 4.02059L14 8.04051V4.02059L7.00051 0.000671387L-6.59503e-07 4.02059V8.04051H0.00101681Z"
-          fill="#A435F0"
-        />
-        <path
-          id="Vector_2"
-          d="M14 11.4163H10.3332V20.2777C10.3332 22.5671 8.61463 23.6833 7.00051 23.6833C5.37248 23.6833 3.66645 22.5374 3.66645 20.2469V11.4163H-6.59503e-07V20.489C-6.59503e-07 22.5978 0.666472 24.2253 1.99976 25.3412C3.33372 26.4564 4.99973 26.9995 7.03137 26.9995C9.06098 26.9995 10.728 26.4574 12.0301 25.3412C13.3335 24.2264 14 22.6592 14 20.5791V11.4163Z"
-          fill="black"
-        />
-      </g>
-      <defs>
-        <clipPath id="clip0_4_373">
-          <rect
-            width="14"
-            height="27"
-            fill="white"
-            transform="matrix(-1 0 0 1 14 0)"
-          />
-        </clipPath>
-      </defs>
+      <path
+        fill="#ffe500"
+        d="m5.67 9.914l3.062-4.143c1.979-2.678 2.969-4.017 3.892-3.734c.923.283.923 1.925.923 5.21v.31c0 1.185 0 1.777.379 2.148l.02.02c.387.363 1.003.363 2.236.363c2.22 0 3.329 0 3.704.673l.018.034c.354.683-.289 1.553-1.574 3.29l-3.062 4.144c-1.98 2.678-2.969 4.017-3.892 3.734c-.923-.283-.923-1.925-.923-5.21v-.31c0-1.185 0-1.777-.379-2.148l-.02-.02c-.387-.363-1.003-.363-2.236-.363c-2.22 0-3.329 0-3.703-.673a1.084 1.084 0 0 1-.019-.034c-.354-.683.289-1.552 1.574-3.29"
+      />
     </svg>
   ),
   superpeer: (
@@ -123,14 +148,14 @@ const Icons: {
       </g>
       <defs>
         <clipPath id="clip0_4_330">
-          <rect width="26" height="29" fill="white" />
+          <rect width="26" height="29" fill="black" />
         </clipPath>
       </defs>
     </svg>
   ),
 };
 
-const Icon = ({ type, color = "#fff" }: { type: string; color?: string }) => {
+const Icon = ({ type, color = "#000" }: { type: string; color?: string }) => {
   return (
     <div
       style={{

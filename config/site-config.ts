@@ -124,21 +124,18 @@ const GridItems: GridItemInterface[] = [
   {
     layout: "2x1",
     type: "mentor",
-    title: "Next.js Mentorship",
-    icon: "superpeer",
-    promotion: "MAKRDEVFELLOWS",
-    oldPrice: "$100",
-    price: "$50",
+    title: "Need a website?",
+    icon: "designer",
+    promotion: "BOOK A MEETING",
     buttonLink: "https://superpeer.com/makrdev/-/nextjs-mentor",
   },
   {
     layout: "2x1",
     type: "mentor",
-    title: "Supabase Mentorship",
-    icon: "superpeer",
-    promotion: "MAKRDEVFELLOWS",
-    oldPrice: "$100",
-    price: "$50",
+    title: "Need a developer?",
+    icon: "developer",
+    promotion: "LETS CONNECT",
+
     buttonLink: "https://superpeer.com/makrdev/-/supabase-mentor",
   },
 
@@ -154,15 +151,13 @@ const GridItems: GridItemInterface[] = [
   {
     layout: "2x2",
     type: "social",
-    title: "Full-stack Multilingual Blog with Next.js 13",
-    username: "@batuhanbilginn",
-    description:
-      "Learn how to build a full-stack, multilingual and high performant blog website with Next.js 13.4 and Directus.",
-    icon: "udemy",
-    buttonTitle: "Enroll",
-    buttonSecondaryText: "%90 OFF",
-    buttonLink:
-      "https://www.udemy.com/course/nextjs13-fullstack-blog-seo-internationalization/?couponCode=MAKRDEVFELLOWS2",
+    title: "Now",
+    username: "@rcmwdev",
+    description: "Training for a half-marathon &  Reading The Will of the Many",
+    icon: "now",
+    buttonTitle: "Last updated:",
+    buttonSecondaryText: "July 2, 2024",
+    buttonLink: "https://nownownow.com/about",
   },
   {
     layout: "2x1",
