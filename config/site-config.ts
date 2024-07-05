@@ -1,3 +1,13 @@
+function getFormattedDate() {
+  const today = new Date();
+  const options: Intl.DateTimeFormatOptions = {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  };
+  return today.toLocaleDateString("en-US", options);
+}
+
 export type GridItemLayout = "1x2" | "2x1" | "2x2" | "2x4";
 export type GridItemType =
   | "project"
@@ -153,7 +163,7 @@ const GridItems: GridItemInterface[] = [
     icon: "now",
     color: "#17191e",
     buttonTitle: "Last updated:",
-    buttonSecondaryText: "July 2, 2024",
+    buttonSecondaryText: getFormattedDate(),
     buttonLink: "https://nownownow.com/about",
   },
   {
