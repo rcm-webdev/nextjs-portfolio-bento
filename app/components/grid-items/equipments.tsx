@@ -16,12 +16,14 @@ const Equipments = ({ item }: { item: GridItemInterface }) => {
       />
       {/* Content */}
       <div className="relative z-20 w-full p-4 space-y-3 md:p-8">
-        <div className="text-sm font-medium text-white">{item.title}</div>
+        <div className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-zinc-200/60 via-zinc-200 to-zinc-200/60">
+          {item.title}
+        </div>
         <div className="flex flex-wrap items-center gap-3">
           {item.equipments?.map((equipment, index) => {
             return (
               <Link
-                className="px-2 py-1 text-sm font-medium bg-white rounded-lg dark:bg-neutral-900"
+                className="px-2 py-1 text-lg font-medium bg-white rounded-lg dark:bg-neutral-900"
                 key={equipment.link ?? "" + index}
                 href={equipment.link ?? ""}
                 target="_blank"
