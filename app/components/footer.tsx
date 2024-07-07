@@ -1,7 +1,14 @@
 import React from "react";
 import { ThemeToggle } from "./theme-toggle";
 
+// Function to get the current year
+function getCurrentYear() {
+  const today = new Date();
+  return today.getFullYear();
+}
+
 const Footer = () => {
+  const currentYear = getCurrentYear();
   return (
     <div className="pt-6 w-full text-xs border-t border-neutral-200 dark:border-neutral-800 ">
       <div className="flex justify-between items-center w-full">
@@ -14,7 +21,7 @@ const Footer = () => {
           >
             @rcmwdev <br />
           </a>{" "}
-          &#169;2024 RCMCODES | All Rights Reserved
+          &#169; {currentYear} RCMCODES | All Rights Reserved
         </span>
         <ThemeToggle />
       </div>
