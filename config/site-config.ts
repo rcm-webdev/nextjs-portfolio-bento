@@ -16,7 +16,7 @@ export type GridItemType =
   | "network"
   | "social"
   | "equipment"
-  | "mentor";
+  | "inquiries";
 export type TechStack = {
   title: string;
 };
@@ -54,7 +54,7 @@ const GridItems: GridItemInterface[] = [
     icon: "codewars",
     username: "@rcmwdev",
     description:
-      "My true passion is learning and sharing my knowledge, which is why I started creating Youtube videos about web development, startups, and marketing.",
+      "I engage in daily challenges on Codewars to hone my skills and stay sharp as a developer. This platform allows me to tackle a variety of coding problems and keeping me up-to-date with best practices",
     color: "#f05656",
     buttonTitle: "Follow",
     buttonLink: "https://www.codewars.com/users/rcmwdev",
@@ -125,11 +125,11 @@ const GridItems: GridItemInterface[] = [
     buttonTitle: "Follow",
     buttonLink: "https://twitter.com/rcmwdev",
     description:
-      "Full Stack Software Engineer / I build full stack web applications and provide online solutions for small businesses.",
+      "Full Stack Software Engineer / I build full stack web applications and help small businesses build an online presence.",
   },
   {
     layout: "2x1",
-    type: "mentor",
+    type: "inquiries",
     title: "Need a website?",
     icon: "designer",
     promotion: "BOOK A MEETING",
@@ -138,12 +138,12 @@ const GridItems: GridItemInterface[] = [
   },
   {
     layout: "2x1",
-    type: "mentor",
+    type: "inquiries",
     title: "Need a developer?",
     icon: "developer",
     promotion: "LETS CONNECT",
     description: "You are a hiring manager seeking a motivated developer.",
-    color: "#171717",
+
     buttonLink: "/",
   },
 

@@ -3,7 +3,7 @@ import { siteConfig } from "@/config/site-config";
 import React, { useEffect } from "react";
 import GridItem from "./grid-item";
 import SocialBox from "./grid-items/social-box";
-import Mentor from "./grid-items/mentor";
+import Inquiries from "./grid-items/inquiries";
 import Project from "./grid-items/project";
 import Equipments from "./grid-items/equipments";
 import { useAnimate, stagger } from "framer-motion";
@@ -45,8 +45,8 @@ const RightPanel = () => {
             <GridItem key={item.title + index} size={item.layout}>
               {item.type === "social" ? (
                 <SocialBox item={item} />
-              ) : item.type === "mentor" ? (
-                <Mentor item={item} />
+              ) : item.type === "inquiries" ? (
+                <Inquiries item={item} />
               ) : item.type === "project" ? (
                 <Project item={item} />
               ) : item.type === "equipment" ? (
