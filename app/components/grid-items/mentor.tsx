@@ -9,8 +9,9 @@ const Mentor = ({ item }: { item: GridItemInterface }) => {
       className="flex items-center justify-between gap-4"
     >
       {item.icon && <Icon type={item.icon} color={item.color} />}
-      <div className="w-1/2 text-base @lg:text-lg font-semibold">
-        {item.title}
+      <div className="w-1/2 text-base ">
+        <h3 className="@lg:text-lg font-semibold">{item.title}</h3>
+        <p className="text-sm text-neutral-500">{item.description}</p>
       </div>
       {/* Price & Promo Container */}
       <div className="justify-center">

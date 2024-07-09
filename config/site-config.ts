@@ -133,6 +133,7 @@ const GridItems: GridItemInterface[] = [
     title: "Need a website?",
     icon: "designer",
     promotion: "BOOK A MEETING",
+    description: "You are a small business that needs a website.",
     buttonLink: "/",
   },
   {
@@ -141,6 +142,7 @@ const GridItems: GridItemInterface[] = [
     title: "Need a developer?",
     icon: "developer",
     promotion: "LETS CONNECT",
+    description: "You are a hiring manager seeking a motivated developer.",
     color: "#171717",
     buttonLink: "/",
   },
