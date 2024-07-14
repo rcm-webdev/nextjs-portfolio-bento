@@ -2,7 +2,6 @@ import { GridItemInterface } from "@/config/site-config";
 import Image from "next/image";
 import Link from "next/link";
 import { Particles } from "../particles";
-import { HighlighterItem, HighlightGroup } from "../highlighter";
 
 const Equipments = ({ item }: { item: GridItemInterface }) => {
   return (
@@ -12,7 +11,7 @@ const Equipments = ({ item }: { item: GridItemInterface }) => {
         quantity={200}
         color={"#fde047"}
       />
-      <div className="absolute inset-0 bg-neutral-700 w-full h-full"></div>
+      <div className="absolute inset-0 bg-neutral-800 w-full h-full"></div>
       {/* Overlay */}
       <div className=" absolute inset-0 z-10 bg-gradient-to-b from-transparent via-neutral-950/60 to-neutral-950/90" />
       {/* Image */}
