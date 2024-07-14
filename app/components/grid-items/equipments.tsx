@@ -30,7 +30,7 @@ const Equipments = ({ item }: { item: GridItemInterface }) => {
           {item.equipments?.map((equipment, index) => {
             return (
               <Link
-                className="px-2 py-1 text-lg font-medium bg-white rounded-lg dark:bg-neutral-900"
+                className="px-2 py-1 text-lg font-medium bg-gradient-to-r from-white/80 via-white to-white/80 hover:bg-white rounded-lg dark:from-neutral-900/80 dark:via-neutral-900 dark:to-neutral-900/80 dark:hover:bg-neutral-800 group"
                 key={equipment.link ?? "" + index}
                 href={equipment.link ?? ""}
                 target="_blank"
