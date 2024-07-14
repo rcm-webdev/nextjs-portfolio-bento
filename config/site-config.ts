@@ -66,7 +66,7 @@ const GridItems: GridItemInterface[] = [
     title: "LinkedIn",
     icon: "linkedin",
     buttonTitle: "Connect",
-    buttonLink: "www.linkedin.com/in/roberto-c-murillo",
+    buttonLink: "https://linkedin.com/in/roberto-c-murillo",
     buttonSecondaryText: "230",
     color: "#0076b2",
   },
