@@ -8,7 +8,7 @@ const Equipments = ({ item }: { item: GridItemInterface }) => {
     <div className="flex flex-col items-end justify-end w-full h-full overflow-hidden rounded-3xl">
       <Particles
         className="absolute inset-0 z-20 opacity-0 dark:opacity-100 "
-        quantity={200}
+        quantity={50}
         color={"#fde047"}
       />
       <div className="absolute inset-0 bg-neutral-800 w-full h-full"></div>
