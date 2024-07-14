@@ -84,7 +84,7 @@ const GridItems: GridItemInterface[] = [
     layout: "2x4",
     type: "equipment",
     title: "Tech Stack",
-    image: "/code.webp",
+    // image: "/code.webp",
     equipments: [
       {
         title: "MongoDB",
