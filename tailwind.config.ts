@@ -9,9 +9,6 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors: {
-        primary: "#6178F1",
-      },
       boxShadow: {
         grid: "0px 4px 10px 0px rgba(0,0,0,0.05);",
       },
