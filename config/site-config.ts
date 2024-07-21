@@ -84,7 +84,7 @@ const GridItems: GridItemInterface[] = [
     layout: "2x4",
     type: "technology",
     title: "Tech Stack",
-    // image: "/code.webp",
+
     technology: [
       {
         title: "MongoDB",
@@ -143,7 +143,8 @@ const GridItems: GridItemInterface[] = [
   {
     layout: "2x1",
     type: "project",
-    title: "PlantJoy",
+    title: "AstroView",
+    description: "web app for Stargazer Club Members",
     icon: "github",
     color: "#070707",
     buttonLink: "https://github.com/",
@@ -164,7 +165,8 @@ const GridItems: GridItemInterface[] = [
   {
     layout: "2x1",
     type: "project",
-    title: "StarSight",
+    title: "PlanJoy",
+    description: "web app for future plant parents",
     icon: "github",
     stars: 1,
     color: "#070707",
