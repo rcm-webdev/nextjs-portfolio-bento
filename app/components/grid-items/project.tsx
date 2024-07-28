@@ -11,7 +11,10 @@ const Project = ({ item }: { item: GridItemInterface }) => {
       className="flex items-center justify-between gap-4"
     >
       {item.icon && <Icon type={item.icon} color={item.color} />}
-      <div className="w-full text-base @lg:text-lg  font-semibold">
+      <div
+        className="w-full text-base @lg:text-lg  font-semibold"
+        title={item.description}
+      >
         {item.title}
       </div>
       <div className="flex items-center gap-1">
