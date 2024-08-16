@@ -26,7 +26,9 @@ const LeftPanel = () => {
             priority
             loading="eager"
             placeholder="blur"
-            className="filter grayscale hover:grayscale-0 transition duration-1000"
+            fill
+            sizes="144px"
+            className=" object-cover filter grayscale hover:grayscale-0 transition duration-1000"
           />
         </a>
 
@@ -64,7 +66,7 @@ const LeftPanel = () => {
           </Link>
           <Link
             className="w-full  text-neutral-900 dark:text-zinc-200  dark:bg-neutral-950 text-opacity-60 hover:text-opacity-100 dark:text-opacity-60 dark:hover:text-opacity-100"
-            href="/"
+            href="/work"
             target="_blank"
           >
             Build a website.
