@@ -10,16 +10,16 @@ const Icons: {
     >
       <defs>
         <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stop-color="#3b82f6"></stop>
-          <stop offset="100%" stop-color="#a855f7"></stop>
+          <stop offset="0%" stopColor="#3b82f6"></stop>
+          <stop offset="100%" stopColor="#a855f7"></stop>
         </linearGradient>
       </defs>
       <path
         fill="none"
         stroke="url(#gradient)"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.5"
         d="M3 8.25V18a2.25 2.25 0 0 0 2.25 2.25h13.5A2.25 2.25 0 0 0 21 18V8.25m-18 0V6a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 6v2.25m-18 0h18M5.25 6h.008v.008H5.25zM7.5 6h.008v.008H7.5zm2.25 0h.008v.008H9.75z"
       ></path>
     </svg>
@@ -34,8 +34,8 @@ const Icons: {
     >
       <defs>
         <linearGradient id="gradientTwo" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stop-color="#FF5F6D"></stop>
-          <stop offset="100%" stop-color="#FFC371"></stop>
+          <stop offset="0%" stopColor="#FF5F6D"></stop>
+          <stop offset="100%" stopColor="#FFC371"></stop>
         </linearGradient>
       </defs>
       <path
