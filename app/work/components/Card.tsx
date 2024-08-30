@@ -13,7 +13,7 @@ const Card: React.FC<CardProps> = ({ image, title }) => {
 
   return (
     <motion.div
-      className="relative overflow-hidden h-[589px] w-[968px] flex-shrink-0 flex justify-center items-center rounded-3xl"
+      className="relative overflow-hidden w-full max-w-[968px] aspect-[16/9] flex-shrink-0 flex justify-center items-center rounded-3xl"
       onHoverStart={() => setShowOverlay(true)}
       onHoverEnd={() => setShowOverlay(false)}
     >
@@ -39,6 +39,7 @@ const Card: React.FC<CardProps> = ({ image, title }) => {
                   width={32}
                   height={32}
                   viewBox="0 0 24 24"
+                  className="dark:text-black"
                 >
                   <path
                     fill="currentColor"
@@ -53,9 +54,11 @@ const Card: React.FC<CardProps> = ({ image, title }) => {
       <Image
         src={image}
         alt={title}
-        width={900}
-        height={900}
+        width={968}
+        height={544}
         className="object-cover w-full h-full"
+        sizes="(max-width: 968px) 100vw, 968px"
+        quality={90}
       />
     </motion.div>
   );
