@@ -101,9 +101,9 @@ const Hero = () => {
               <div className="relative h-[600px] shadow-2xl rounded-xl overflow-hidden">
                 <div className="flex items-center flex-none px-4 bg-[#2c3e50] rounded-b-none h-11">
                   <div className="flex space-x-1.5">
-                    <div className="w-3 h-3 border-2 border-white rounded-full"></div>
-                    <div className="w-3 h-3 border-2 border-white rounded-full"></div>
-                    <div className="w-3 h-3 border-2 border-white rounded-full"></div>
+                    <div className="w-3 h-3 border-2 border-white bg-[#ff605c] rounded-full"></div>
+                    <div className="w-3 h-3 border-2 border-white bg-[#ffbd44] rounded-full"></div>
+                    <div className="w-3 h-3 border-2 border-white bg-[#00ca4e] rounded-full"></div>
                   </div>
                 </div>
                 <div className="absolute inset-0 top-11">
