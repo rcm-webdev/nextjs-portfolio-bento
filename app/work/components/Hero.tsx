@@ -4,11 +4,17 @@ import React, { useEffect, useState } from "react";
 import Card from "./Card";
 import useMeasure from "react-use-measure";
 import { useMotionValue, animate, motion } from "framer-motion";
+import { title } from "process";
+import { itemFromSingleOrMultiple } from "@tsparticles/engine";
 
 const Hero = () => {
-  const images = ["/hero.png", "/hero.png", "/hero.png"];
+  const images = [
+    { src: "/hero.png", title: "PageLaunch" },
+    { src: "/inked.png", title: "Inked Healing" },
+    { src: "/purestyle.png", title: "Purestyle Salon" },
+  ];
 
-  const FAST_DURATION = 25;
+  const FAST_DURATION = 45;
   const SLOW_DURATION = 75;
 
   const [duration, setDuration] = useState(FAST_DURATION);
@@ -17,19 +23,40 @@ const Hero = () => {
 
   const xTranslation = useMotionValue(0);
 
+  const [mustFinish, setMustFinish] = useState(false);
+  const [rerender, setRerender] = useState(false);
+
   useEffect(() => {
     let controls;
-    let finalPosition = -width / 2 - 8;
-    controls = animate(xTranslation, [0, finalPosition], {
-      ease: "linear",
-      duration: duration,
-      repeat: Infinity,
-      repeatType: "loop",
-      repeatDelay: 0,
-    });
+    const totalWidth = width * images.length; // Calculate total width of all images
+    const finalPosition = -totalWidth - 8; // Adjust final position
 
-    return controls.stop;
-  }, [xTranslation, width, duration]);
+    const animateTicker = () => {
+      controls = animate(xTranslation, [0, finalPosition], {
+        ease: "linear",
+        duration: duration,
+        onComplete: () => {
+          xTranslation.set(0); // Reset position to start
+          animateTicker(); // Restart the animation
+        },
+      });
+    };
+
+    if (mustFinish) {
+      controls = animate(xTranslation, [xTranslation.get(), finalPosition], {
+        ease: "linear",
+        duration: duration * (1 - xTranslation.get() / finalPosition),
+        onComplete: () => {
+          setMustFinish(false);
+          setRerender(!rerender);
+        },
+      });
+    } else {
+      animateTicker();
+    }
+
+    return controls?.stop;
+  }, [xTranslation, width, duration, rerender, mustFinish, images.length]);
 
   return (
     <div>
@@ -51,7 +78,7 @@ const Hero = () => {
             <div className="mb-4 space-x-0 md:space-x-2 md:mb-8">
               <a
                 href="#_"
-                className=" font-bold inline-flex gap-2 items-center justify-center w-full px-6 py-3 mb-2 text-lg text-white bg-[#2c3e50] rounded-2xl sm:w-auto sm:mb-0"
+                className=" font-bold inline-flex gap-2 items-center justify-center w-full px-6 py-3 mb-2 text-lg text-white bg-[#2c3e50] rounded-2xl sm:w-auto sm:mb-0 hover:bg-gradient-to-t from-[#bdc3c7] to-[#2c3e50] "
               >
                 <span>LAUNCH MY WEBSITE</span>
 
@@ -81,19 +108,20 @@ const Hero = () => {
                 </div>
                 <div className="absolute inset-0 top-11">
                   <motion.div
-                    className="flex h-full gap-10"
+                    className="flex h-full gap-4"
                     ref={ref}
                     style={{ x: xTranslation }}
-                    onHoverStart={() => setDuration(SLOW_DURATION)}
-                    onHoverEnd={() => setDuration(FAST_DURATION)}
+                    onHoverStart={() => {
+                      setMustFinish(true);
+                      setDuration(SLOW_DURATION);
+                    }}
+                    onHoverEnd={() => {
+                      setMustFinish(true);
+                      setDuration(FAST_DURATION);
+                    }}
                   >
-                    {[...images, ...images].map((image, index) => (
-                      <Card
-                        key={index}
-                        image={image}
-                        title="title"
-                        description="description"
-                      />
+                    {[...images, ...images].map((item, index) => (
+                      <Card key={index} image={item.src} title={item.title} />
                     ))}
                   </motion.div>
                 </div>
