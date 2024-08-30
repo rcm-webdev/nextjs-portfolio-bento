@@ -1,7 +1,36 @@
-import Image from "next/image";
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
+import Card from "./Card";
+import useMeasure from "react-use-measure";
+import { useMotionValue, animate, motion } from "framer-motion";
 
 const Hero = () => {
+  const images = ["/hero.png", "/hero.png", "/hero.png"];
+
+  const FAST_DURATION = 25;
+  const SLOW_DURATION = 75;
+
+  const [duration, setDuration] = useState(FAST_DURATION);
+
+  let [ref, { width }] = useMeasure();
+
+  const xTranslation = useMotionValue(0);
+
+  useEffect(() => {
+    let controls;
+    let finalPosition = -width / 2 - 8;
+    controls = animate(xTranslation, [0, finalPosition], {
+      ease: "linear",
+      duration: duration,
+      repeat: Infinity,
+      repeatType: "loop",
+      repeatDelay: 0,
+    });
+
+    return controls.stop;
+  }, [xTranslation, width, duration]);
+
   return (
     <div>
       <section className="pt-24 ">
@@ -42,21 +71,32 @@ const Hero = () => {
           </div>
           <div className="w-full mx-auto mt-20 text-center md:w-10/12">
             <div className="relative z-0 w-full mt-8">
-              <div className="relative overflow-hidden shadow-2xl">
-                <div className="flex items-center flex-none px-4 bg-[#2c3e50] rounded-b-none h-11 rounded-xl">
+              <div className="relative h-[600px] shadow-2xl rounded-xl overflow-hidden">
+                <div className="flex items-center flex-none px-4 bg-[#2c3e50] rounded-b-none h-11">
                   <div className="flex space-x-1.5">
                     <div className="w-3 h-3 border-2 border-white rounded-full"></div>
                     <div className="w-3 h-3 border-2 border-white rounded-full"></div>
                     <div className="w-3 h-3 border-2 border-white rounded-full"></div>
                   </div>
                 </div>
-                <Image
-                  src=""
-                  alt="hero"
-                  width={1440}
-                  height={800}
-                  className="blur-2xl"
-                />
+                <div className="absolute inset-0 top-11">
+                  <motion.div
+                    className="flex h-full gap-10"
+                    ref={ref}
+                    style={{ x: xTranslation }}
+                    onHoverStart={() => setDuration(SLOW_DURATION)}
+                    onHoverEnd={() => setDuration(FAST_DURATION)}
+                  >
+                    {[...images, ...images].map((image, index) => (
+                      <Card
+                        key={index}
+                        image={image}
+                        title="title"
+                        description="description"
+                      />
+                    ))}
+                  </motion.div>
+                </div>
               </div>
             </div>
           </div>
