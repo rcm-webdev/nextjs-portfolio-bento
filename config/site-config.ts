@@ -121,23 +121,22 @@ const GridItems: GridItemInterface[] = [
       "Full Stack Software Engineer / I build full stack web applications and help small businesses build an online presence.",
   },
   {
-    layout: "2x1",
+    layout: "2x2",
     type: "inquiries",
     title: "Need a website?",
-    icon: "designer",
+    icon: "work",
     promotion: "BOOK A MEETING",
-    description: "You are a small business that needs a website.",
-    buttonLink: "/",
+    buttonLink: "/work",
+    description: "You are a small business that needs a website. ",
   },
   {
-    layout: "2x1",
+    layout: "2x2",
     type: "inquiries",
     title: "Need a developer?",
-    icon: "developer",
+    icon: "code",
     promotion: "LETS CONNECT",
-    description: "You are a hiring manager seeking a motivated developer.",
-
-    buttonLink: "/",
+    buttonLink: "https://twitter.com/rcmwdev",
+    description: "You are a hiring manager seeking a motivated developer. ",
   },
 
   {
