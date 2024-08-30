@@ -6,15 +6,14 @@ import { AnimatePresence, motion } from "framer-motion";
 interface CardProps {
   image: string;
   title: string;
-  description: string;
 }
 
-const Card: React.FC<CardProps> = ({ image }) => {
+const Card: React.FC<CardProps> = ({ image, title }) => {
   const [showOverlay, setShowOverlay] = useState(false);
 
   return (
     <motion.div
-      className="relative overflow-hidden h-[589px] w-[768px] flex-shrink-0 flex justify-center items-center rounded-3xl"
+      className="relative overflow-hidden h-[589px] w-[968px] flex-shrink-0 flex justify-center items-center rounded-3xl"
       onHoverStart={() => setShowOverlay(true)}
       onHoverEnd={() => setShowOverlay(false)}
     >
@@ -33,7 +32,7 @@ const Card: React.FC<CardProps> = ({ image }) => {
               animate={{ y: 0 }}
               exit={{ y: 20 }}
             >
-              <span>Explore Now</span>
+              <span className="text-black">{title}</span>
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -53,9 +52,9 @@ const Card: React.FC<CardProps> = ({ image }) => {
       </AnimatePresence>
       <Image
         src={image}
-        alt="hero"
-        width={1000}
-        height={1000}
+        alt={title}
+        width={900}
+        height={900}
         className="object-cover w-full h-full"
       />
     </motion.div>
