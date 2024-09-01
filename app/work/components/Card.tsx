@@ -13,7 +13,7 @@ const Card: React.FC<CardProps> = ({ image, title }) => {
 
   return (
     <motion.div
-      className="relative overflow-hidden w-full max-w-[968px] aspect-[16/9] flex-shrink-0 flex justify-center items-center rounded-3xl"
+      className="relative overflow-hidden w-full max-w-[968px] aspect-[16/9] flex-shrink-0 flex justify-center items-center rounded-3xl shadow-2xl"
       onHoverStart={() => setShowOverlay(true)}
       onHoverEnd={() => setShowOverlay(false)}
     >
