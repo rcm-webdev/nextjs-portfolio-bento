@@ -131,7 +131,7 @@ const Hero = () => {
           <div className="inline lg:w-[100vw] mx-auto mt-20 text-center md:w-10/12 overflow-x-hidden  ">
             <div className="overflow-x-hidden">
               <motion.div
-                className="flex h-full gap-4  "
+                className="flex h-full gap-4 "
                 ref={ref}
                 style={{ x: xTranslation }}
                 onHoverStart={() => {
