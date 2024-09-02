@@ -96,7 +96,7 @@ const Hero = () => {
               </a>
             </div>
           </div>
-          <div className="w-full mx-auto mt-20 text-center md:w-10/12">
+          {/* <div className="hidden md:inline lg:inline-block lg:w-full mx-auto mt-20 text-center md:w-10/12">
             <div className="relative z-0 w-full mt-8">
               <div className="relative h-[600px] shadow-2xl rounded-xl overflow-hidden">
                 <div className="flex items-center flex-none px-4 bg-[#2c3e50] rounded-b-none h-11">
@@ -126,6 +126,27 @@ const Hero = () => {
                   </motion.div>
                 </div>
               </div>
+            </div>
+          </div> */}
+          <div className="inline lg:w-[100vw] mx-auto mt-20 text-center md:w-10/12 overflow-x-hidden  ">
+            <div className="overflow-x-hidden">
+              <motion.div
+                className="flex h-full gap-4 "
+                ref={ref}
+                style={{ x: xTranslation }}
+                onHoverStart={() => {
+                  setMustFinish(true);
+                  setDuration(SLOW_DURATION);
+                }}
+                onHoverEnd={() => {
+                  setMustFinish(true);
+                  setDuration(FAST_DURATION);
+                }}
+              >
+                {[...images, ...images].map((item, index) => (
+                  <Card key={index} image={item.src} title={item.title} />
+                ))}
+              </motion.div>
             </div>
           </div>
         </div>
